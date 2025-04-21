@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>北京中轴线与古代水系交互地图</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入Leaflet地图库 -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <style>
+        /* 默认图标样式 */
+        .default-marker-icon {
+            width: 25px;
+            height: 41px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 41'%3E%3Cpath d='M12.5 0C5.596 0 0 5.596 0 12.5c0 1.886.533 3.742 1.539 5.334L12.5 41l10.96-23.166C24.468 16.242 25 14.386 25 12.5 25 5.596 19.404 0 12.5 0zm0 17.5c-2.761 0-5-2.239-5-5s2.239-5 5-5 5 2.239 5 5-2.239 5-5 5z' fill='%23d81e06'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        .default-river-icon {
+            width: 25px;
+            height: 25px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath d='M12.5 0C5.596 0 0 5.596 0 12.5S5.596 25 12.5 25 25 19.404 25 12.5 19.404 0 12.5 0zm0 19.5c-3.866 0-7-3.134-7-7s3.134-7 7-7 7 3.134 7 7-3.134 7-7 7z' fill='%232f86d5'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        /* 标记样式 */
+        .marker-label {
+            white-space: nowrap;
+            color: #333;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 2px solid #666;
+            border-radius: 4px;
+            padding: 3px 8px;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        /* 中轴线标记样式 */
+        .centralAxis-label .marker-label {
+            border-color: #d81e06;
+            color: #d81e06;
+        }
+        
+        /* 河流标记样式 */
+        .river-label .marker-label {
+            border-color: #2f86d5;
+            color: #2f86d5;
+        }
+        
+        /* 版权信息样式 */
+        .copyright {
+            background-color: #d81e06;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>北京中轴线与古代水系交互地图</h1>
+        </header>
+
+        <div class="button-container">
+            <button id="show-central-axis">显示中轴线</button>
+            <button id="show-ancient-rivers">显示古河道</button>
+            <button id="show-both">显示全部</button>
+            <button id="clear-all">清除全部</button>
+        </div>
+
+        <div id="map-container"></div>
+
+        <div class="info-panel">
+            <h2>信息</h2>
+            <div id="info-content">
+                <p>欢迎使用北京中轴线与古代水系交互地图。</p>
+                <p>请点击上方按钮查看中轴线或古代水系，点击标记可查看详细信息。</p>
+                <p>本地图采用天地图API，展示北京城市中轴线及历史水系的位置与信息。</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            © 2025 数版1班 吴维深
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

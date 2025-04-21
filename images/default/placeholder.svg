@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="200" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="300" height="200" fill="#f0f0f0"/>
+  
+  <!-- 地标建筑轮廓 -->
+  <path d="M150 30L190 70V170H110V70L150 30Z" fill="#e0e0e0" stroke="#666666" stroke-width="2"/>
+  
+  <!-- 门 -->
+  <rect x="140" y="130" width="20" height="40" fill="#d8d8d8" stroke="#666666" stroke-width="1"/>
+  
+  <!-- 窗户 -->
+  <rect x="125" y="90" width="15" height="20" fill="#d8d8d8" stroke="#666666" stroke-width="1"/>
+  <rect x="160" y="90" width="15" height="20" fill="#d8d8d8" stroke="#666666" stroke-width="1"/>
+  
+  <!-- 文字 -->
+  <text x="150" y="190" font-family="Arial, sans-serif" font-size="14" fill="#666666" text-anchor="middle">地标图片</text>
+</svg> 

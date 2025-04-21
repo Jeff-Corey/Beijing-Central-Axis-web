@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="200" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="300" height="200" fill="#f0f0f0"/>
+  
+  <!-- 河流 -->
+  <path d="M20 100C50 70 80 130 120 100C160 70 190 130 230 100C270 70 300 100 300 100" stroke="#2f86d5" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <path d="M20 130C50 100 80 160 120 130C160 100 190 160 230 130C270 100 300 130 300 130" stroke="#2f86d5" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.7"/>
+  
+  <!-- 船 -->
+  <path d="M180 90L200 90L210 100L170 100L180 90Z" fill="#8c6e4a" stroke="#666666" stroke-width="1"/>
+  <line x1="190" y1="75" x2="190" y2="90" stroke="#666666" stroke-width="1"/>
+  
+  <!-- 文字 -->
+  <text x="150" y="180" font-family="Arial, sans-serif" font-size="14" fill="#666666" text-anchor="middle">河流图片</text>
+</svg> 
